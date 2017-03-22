@@ -25,10 +25,10 @@ COPY ./source /usr/local/lib/node_modules/node-red/nodes/core/hardware
 RUN chmod 777 /usr/local/lib/node_modules/node-red/nodes/core/hardware/nrgpio
 
 
-# install blinkt
+# install blinkt and git
 RUN apt-get install python-blinkt git
 
-RUN git clone http://github.com/pimoroni/node-red-nodes /root/.node-red/nodes
+RUN git clone http://github.com/tonyyates/node-red-nodes /root/.node-red/nodes
 
 WORKDIR /root/bin
 RUN ln -s /usr/bin/python2 ~/bin/python
